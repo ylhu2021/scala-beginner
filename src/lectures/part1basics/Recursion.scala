@@ -1,5 +1,8 @@
 package lectures.part1basics
 
+import lectures.part1basics.Functions.aRepeatedFunction
+
+import scala.annotation.tailrec
 import scala.jdk.Accumulator
 
 object Recursion extends App{
@@ -15,9 +18,12 @@ object Recursion extends App{
     }
 
   println(factorial(10))
-  //  println(factorial(5000))
+  //  println(factorial(5000)) this would crash!!!!
 
+
+  // when the number is pretty big, use BigInt
   def anotherFactorial(n: Int): BigInt = {
+    @tailrec   //annotation - telling the compiler that this function is supposed to be tail recursion, if it is not, it will issue errors.
     def factHelper(x: Int, accumulator: BigInt): BigInt =
       if (x <= 1) accumulator
       else factHelper(x - 1, x * accumulator) // TAIL RECURSION = use recursive call as the LAST expression
@@ -46,6 +52,7 @@ object Recursion extends App{
     2.  IsPrime function tail recursive
     3.  Fibonacci function, tail recursive.
    */
+
 
   def concatenateTailrec(aString: String, n: Int, accumulator: String): String =
     if (n <= 0) accumulator
