@@ -1,8 +1,6 @@
 package lectures.part1basics
 
-/**
-  * Created by Daniel.
-  */
+
 object DefaultArgs extends App {
 
   def trFact(n: Int, acc: Int = 1): Int =  // Here Int = 1 basically says that if I do not pass the accumulator value, it is going to be implied as one.
@@ -24,5 +22,10 @@ object DefaultArgs extends App {
 
 }
 
-// When 99% of time we call a function with the same parameters, you can just specify a default value for an argument and just omitted when you call it.
-// BUT we cannot omit leading default arguments. So we could name our parameters,
+/*
+ When 99% of time we call a function with the same parameters, you can just specify a default value for an argument
+ and just omitted when you call it.
+
+ BUT we cannot omit leading default arguments. So we could name our parameters
+
+ */

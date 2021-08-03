@@ -1,10 +1,13 @@
 package lectures.part1basics
 
-/**
-  * Created by Daniel on 07-May-18.
-  */
 object CBNvsCBV extends App {
-// The Unit type in Scala is used as a return statement for a function when no value is to be returned. Unit type can be e compared to void data type of other programming languages like Java. It is a subclass of anytype trait and is used when nothing means to return by the function.
+
+/*
+The Unit type in Scala is used as a return statement for a function when no value is to be returned.
+Unit type can be e compared to void data type of other programming languages like Java.
+It is a subclass of anytype trait and is used when nothing means to return by the function.
+ */
+
   def calledByValue(x: Long): Unit = {  //the format we put long, because the time functions in SCALA and JVM return longs
     println("by value: " + 1257387745764245L)
     println("by value: " + 1257387745764245L)
